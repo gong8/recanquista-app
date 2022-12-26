@@ -15,8 +15,8 @@ public class BackgroundPanel extends JPanel {
     setSize(size);
     this.size = size;
     try {
-      File file = new File("C:/Users/44774/Downloads/background.png");
-      this.image = ImageIO.read(file);
+      InputStream is = getClass().getResourceAsStream("./background.png");
+      this.image = ImageIO.read(is);
     } catch (IOException ex) {
       ex.printStackTrace();
       this.image = null;
